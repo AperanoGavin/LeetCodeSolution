@@ -8,25 +8,12 @@ class Solution {
      * @return NULL
      */
     function merge(&$nums1, $m, $nums2, $n) {
-
-        $a=[];
-        $b =[];
-
-        for($i=0; $i<$m; $i++ ){
-            array_push($a , $nums1[$i]);
-        }
-
-        for($j=0 ;$j<$n ;$j++){
-            array_push($b , $nums2[$j]);
-        }
-
-        $ab = array_merge($a , $b);
-        
-
-        sort($ab);
-        $nums1 = $ab;
-
-        return $nums1;
+        $nums1_ = array_slice($nums1 , 0 ,$m);
+        $nums2_ = array_slice($nums2 , 0 ,$n);
+        $resul = array_merge($nums1_ , $nums2_);
+        $nums1 = $resul;
+        return sort($nums1);
+        //print_r($resul);
         
     }
 }
