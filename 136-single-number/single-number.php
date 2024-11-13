@@ -5,14 +5,6 @@ class Solution {
      * @return Integer
      */
     function singleNumber($nums) {
-        /* $map = array();
-        $realMap = array();
-        for($i=0; $i<=count($nums)-1;$i++){
-            if(!in_array($nums[$i],$map)){
-                $map[] = $nums[$i];
-            }
-        
-        } */
         $map = array();
         $count = array_count_values($nums);
         foreach ($count as $keys => $values){
@@ -20,7 +12,7 @@ class Solution {
                 return $keys;
             }
         }
-        //la clé d minimum de valeur qui se repete
-        
+      
     }
 }
+
