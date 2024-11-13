@@ -5,20 +5,26 @@ class Solution {
      * @return NULL
      */
     function moveZeroes(&$nums) {
-        $numsA = $nums;
-        $map = array();
-        $zerro = array();
-        for($i=0 ; $i<=count($nums)-1; $i++){
-            if($nums[$i] === 0){
-                unset($nums[$i]);
-                array_push($nums , 0);
-
+        $map = $nums;
+        $count = array_count_values($nums);
+        $nums = array_diff($map , [0]);
+        foreach($count as $keys => $values){
+            if($keys == 0){
+                $nb = $values;
             }
-
+        }
+        echo($nb);
+        for($i=0; $i<$nb; $i++){
+            array_push($nums, 0);
         }
 
-        return $nums;
-    }
+        /* print_r($res);
+        print_r($darray);
+        for($i=0; $i<$nb; $i++){
+            $nums = array_push($res , 0);
+        } */
 
-    
+        //return $nums;
+        
+    }
 }
