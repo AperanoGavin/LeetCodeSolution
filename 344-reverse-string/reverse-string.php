@@ -5,10 +5,10 @@ class Solution {
      * @return NULL
      */
     function reverseString(&$s) {
-        $string_S = implode('' , $s);
-        $revserse_S =strrev($string_S);
-    
-        $s = str_split($revserse_S);
+        $map = array();
+        $map = strrev(implode('' , $s));
+        $s = str_split($map);
         return $s;
+        
     }
 }
