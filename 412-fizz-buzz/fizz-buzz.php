@@ -5,18 +5,23 @@ class Solution {
      * @return String[]
      */
     function fizzBuzz($n) {
-        $array=array();
-        for($i=1 ; $i<=$n ;$i++){
-            if(($i %15 == 0 ) ){
-                array_push($array , "FizzBuzz");
-            }else if( $i %3 == 0){
-                 array_push($array , "Fizz");
-            }else if( $i %5 == 0){
-                 array_push($array , "Buzz");
+        $map = array();
+
+        for($i=1; $i<=$n; $i++){
+            if($i %15 == 0){
+                array_push($map , "FizzBuzz");
+            }elseif($i %5 ==0){
+                array_push($map , "Buzz");
+            }elseif($i %3 == 0){
+                array_push($map , "Fizz");
             }else{
-                array_push($array , "$i");
+                array_push($map , "$i");
             }
+            
         }
-        return $array;
+
+        return $map;
+        
+        
     }
 }
