@@ -8,11 +8,11 @@ class Solution {
     function countKDifference($nums, $k) {
 
         $res = 0;
-        for($i=0;$i<sizeof($nums);$i++){
-            for($j=$i+1;$j<sizeof($nums);$j++){
+        $n = sizeof($nums);
+        for($i=0;$i<$n;$i++){
+            for($j=$i+1;$j<$n;$j++){
                if (( $i < $j) && (abs($nums[$i] - $nums[$j]) == $k ) ){
                 $res = $res +1 ;
-
                }
             }
         }
