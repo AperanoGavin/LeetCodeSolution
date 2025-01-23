@@ -5,7 +5,5 @@ class Solution:
             for j in range(len(nums2)):
                 if nums1[i] == nums2[j]:
                     dic.append(nums1[i])
-
-        return list(set(dic)) 
-
+        return list(set(dic))
         
