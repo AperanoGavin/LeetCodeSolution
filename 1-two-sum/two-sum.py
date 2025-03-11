@@ -1,18 +1,16 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        tmp =0
         dic = []
         for i in range(len(nums)):
-            for x in range(i+1 , len(nums)):
-                if nums[i] + nums[x] == target:
+            for j in range(i+1 , len(nums)):
+                if nums[i] + nums[j] == target:
                     dic.append(i)
-                    dic.append(x)
-                    return dic
-        
+                    dic.append(j)
+        print(dic)
+        return dic
 
-       
+
+
         
