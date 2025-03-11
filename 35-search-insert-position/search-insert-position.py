@@ -1,14 +1,10 @@
-class Solution(object):
-    def searchInsert(self, nums, target):
-     nums.sort()
-     len_ =len(nums)
-     for i in range(len_):
-        if nums[i] == target:
-            return i
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        for i in range(len(nums)):
+            if nums[i] >= target :
+                return i
+        return len(nums)
+
         
-     for j in range(len_):
-        if nums[j] > target:
-            return j 
-        
-     return len_     
+            
         
