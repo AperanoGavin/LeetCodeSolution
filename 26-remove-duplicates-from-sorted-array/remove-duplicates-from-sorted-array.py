@@ -1,11 +1,6 @@
-class Solution(object):
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        #print(list(dict.fromkeys(nums)))
-        #return list(dict.fromkeys(nums))
-        print(nums[:])
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+
         nums[:] = sorted(set(nums))
         return len(nums)
+        
