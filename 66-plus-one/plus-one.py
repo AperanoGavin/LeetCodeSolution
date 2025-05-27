@@ -1,15 +1,11 @@
-class Solution(object):
-    def plusOne(self, digits):
-        """
-        :type digits: List[int]
-        :rtype: List[int]
-        """
-        char = ""
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        dic = []
+        res = ""
         for i in range(len(digits)):
-            char = char + str(digits[i])        
-      
-        digits_ = int(char) +1
-        array_ = str(digits_)
-        integer_list = list(map(int, array_))
-        return integer_list
-        
+            res += str(digits[i])
+        val = int(res) +1
+        val_ = str(val)
+        for i in range(len(val_)):
+            dic.append(int(val_[i]))
+        return(dic)
